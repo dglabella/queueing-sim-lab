@@ -1,4 +1,4 @@
-# queueing-sim
+# queueing-sim-lab
 
 Es un proyecto hecho en Java de simulación de sistemas de colas, orientado a eventos desarrollado con Maven con proposito educativo.
 
@@ -24,8 +24,8 @@ Este repositorio contiene la implementación base de un modelo de simulación de
 
 1. Cloná este repositorio:
    ```bash
-   git clone https://github.com/dglabella/queueing-sim.git
-   cd queueing-sim
+   git clone https://github.com/dglabella/queueing-sim-lab.git
+   cd queueing-sim-lab
    ```
 
 2. Compilá el proyecto usando el Wrapper:
