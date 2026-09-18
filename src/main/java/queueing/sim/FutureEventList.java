@@ -1,0 +1,89 @@
+package queueing.sim;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+/**
+ * A list of events sorted by their simulation clock and priority.
+ *
+ * <p>The imminent event is always the first event in the list. Events with lower simulation times
+ * are considered imminent. If two events have the same simulation time, the event with the lower
+ * priority value is considered imminent. If they also have the same priority, their insertion order
+ * is preserved.
+ */
+final class FutureEventList {
+
+  /** The events currently scheduled in the Future Event List. */
+  private final List<Event> events = new ArrayList<>();
+
+  /**
+   * The comparator used to order events in the Future Event List.
+   *
+   * <p>Events with lower simulation times are ordered first. For events with the same simulation
+   * time, events with lower priority values are ordered first.
+   */
+  private final Comparator<Event> comparator = null;
+
+  /**
+   * Constructs a Future Event List with the given events.
+   *
+   * @param events the events to initialize the Future Event List with
+   */
+  FutureEventList(Event... events) {}
+
+  /**
+   * Inserts an event into the Future Event List.
+   *
+   * @param event the event to insert
+   * @throws NullPointerException if {@code event} is {@code null}
+   */
+  void insert(Event event) {
+    throw new UnsupportedOperationException("Unimplemented method 'insert'");
+  }
+
+  /**
+   * Returns the imminent event without removing it from the Future Event List.
+   *
+   * @return the imminent event
+   * @throws IllegalStateException if the Future Event List is empty
+   */
+  Event peek() {
+    throw new UnsupportedOperationException("Unimplemented method 'peek'");
+  }
+
+  /**
+   * Removes and returns the imminent event from the Future Event List.
+   *
+   * <p>If multiple events have the same simulation time, the event with the lowest priority value
+   * is considered imminent. If they also have the same priority, the event inserted first is
+   * considered imminent.
+   *
+   * @return the imminent event
+   * @throws IllegalStateException if the Future Event List is empty
+   */
+  Event imminent() {
+    throw new UnsupportedOperationException("Unimplemented method 'imminent'");
+  }
+
+  /**
+   * Returns whether the Future Event List contains no scheduled events.
+   *
+   * @return {@code true} if the Future Event List is empty, otherwise {@code false}
+   */
+  boolean isEmpty() {
+    throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+  }
+
+  @Override
+  public String toString() {
+    return this.events.toString();
+  }
+
+  /** Ensures that the Future Event List contains at least one event. */
+  private void ensureNotEmpty() {
+    if (this.events.isEmpty()) {
+      throw new IllegalStateException("Future Event List is empty");
+    }
+  }
+}
